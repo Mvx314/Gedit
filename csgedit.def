@@ -1,0 +1,361 @@
+#GEdit definition file for reading Carrier Strike scenariofiles.
+#Version 1.0 (first public release, incomplete)
+#(c) Mika V„liviita, 2002
+
+#Carrier Strike (c) SSI
+
+#Do not edit unless you know exactly what you're doing.
+#Errors may cause GEdit to crash.
+#Maximum safe linelength is 79, you can continue on the next line.
+
+#Size of the file to be edited (also the size of the output file):
+39800               
+#Change the size to 41894 for editing savefiles. (39800 for scenarios.)
+
+#Colors used (main color 1, secondary 1, main 2, secondary 2)
+#Default 12 4 9 1 (LIGHTRED,RED,LIGHTBLUE,BLUE)
+12 4 9 1
+#dark colors:BLACK=0,BLUE=1,GREEN=2,CYAN=3,RED=4,MAGENTA=5,BROWN=6,LIGHTGRAY=7
+#light colors:DARKGRAY=8,LIGHTBLUE=9,LIGHTGREEN=10,LIGHTCYAN=11,LIGHTRED=12
+#             LIGHTMAGENTA=13,YELLOW=14,WHITE=15
+
+#Number of sections = n. Max 25. Range is 0 - (n-1):
+12
+
+#Keys used to select that section, listed here for convenience
+#Used sectionkeys:abcdlnopsvw
+#Unused: efghijkmrtuxyz (don't use 'q')
+
+#Section 0          #Empty section for reference, do not touch
+Empty               #Sectionname (used as a header)
+0                   #Sectionstart (in bytes)
+0                   #Sectionnamelength (if this section contains names)
+0                   #Sectionsize (in units)
+0                   #Number of variables
+                    #Variable definitions (1byte,2byte (x+256y),4byte (abcd))
+                    #Links to other sections (by section number)
+0                   #Number of special links (ie. dependent on value)
+                    #Variable titles (as many as number of variables)
+0                   #Number or columns having vartexts
+                    #Column id to be texted (this overlaps with special links
+                     #and may not work if both are use in the same section)
+                    #Number of pairs for that column
+                    #Pairs of #,vartext
+99999 0 0 0         #Colorcolumn1,Colormodifier1,Colorcolumn2,Colormodifier2
+                     #(99999 as first implies default color for this section)
+                     #Adding 20000+n*10000 to colorcolumn1 modifies coloring
+                     #(various combinations of m1,s1,m2,s2, not all of them)
+q                   #Sectionkey
+0                   #Link to another sections name, if namelength == 0,
+                     #0 means no link, the names are then listed here
+                     #If namelength != 0, no value here
+
+#ShipClasses       0-5599
+#Weapons        5600-7599
+#Planes         7600-9799
+#Ships          9800-22799
+#?             22800-28699?
+#Bases         28700-29619
+#?             29620-29649
+#Airgroups     29650-36649
+#Locs          36650-37149
+#Leaders       37150-39149
+#Data          39150-39159
+#?             39160-39176?
+#ShipLosses    39177-39214
+#?             39215-39282?
+#Points        39283-39298
+#?             39299-39799?
+#Search on/off 41893
+
+#Section 1 (9800-22799)
+Ships               #Sectionname
+9800                   #Sectionstart (in bytes)
+15                  #Sectionnamelength
+500                #Sectionsize (in units)
+11                   #Number of variables
+1 1 1 1 1 1 1 1 1 1 1       #Variable definitions
+2 0 0 0 0 0 0 0 0 0 0       #Links to other sections
+3                  #Number of special links
+7   0   0 0 0 1 Avail
+7   1 222 0 0 1 Delay
+7 223 223 0 0 1 Sunk_
+________Class
+___?
+_Dam
+_Loc
+_Nat
+_Fue
+_Amm
+______Status
+_Fir
+__?
+__?
+#Number of columns with vartexts:
+1
+#Column used:
+4
+#Number of pairs:
+13
+#The pairs of <code,vartext>:
+1 JA 2 JN 3 Phi 4 Chi 5 Dut 6 Ind 7 Aus 8 NZ 9 Bri 
+10 USA 11 USMC 12 USN 13 CWL 
+#Color codes:
+4 2 7 222
+#4 -> color1 from column 4 (Nat), 2 -> <= 2 use color1, >2 use color2,
+#7 -> modify by column 7 (Status), 222 -> <= 222 use main, >222 use second.
+#Sectionkey:
+s
+
+#Section 2 (0-5599)
+Shipclasses
+0
+13
+200
+14
+1 4 0 0 0 4 0 0 0 1 1 1 1 2 #4 means (abcdabcd...abcd), next 3 are 0 because
+0 3 3 3 3 0 0 0 0 0 0 0 0 0 #they are read with the 4
+0               #Numspeclinks
+_Type
+____________Weapon1
+____________Weapon2
+____________Weapon3
+____________Weapon4
+____Wp1#
+____Wp2#
+___Wp3#
+___Wp4#
+_Dur
+_Arm
+_Cap
+_Spd
+__Pool
+1
+0
+19
+1 CV 2 CVL 3 CVE 4 BB 5 BC 6 CA 7 CL 8 CLAA 9 AV 10 DD 11 DE 12 PF 13 APD
+14 AO 15 AP 16 APA 17 AKA 18 TK 19 SS
+0 13 13 0
+c
+
+#Section 3 (5600-7599)
+Weapons
+5600
+15
+100
+5
+1 1 1 1 1
+0 0 0 0 0
+0               #Numspeclinks
+__Warhead
+____Range
+_____Flak
+_Accuracy
+_____Type
+1
+4
+6
+0 Bomb 1 AirTorp 2 Torpedo 3 Gun 4 DP_Gun 5 Flak_Gun
+99999 0 0 0
+w
+
+#Section 4 (28700-29619)
+Base
+28700
+15
+40
+7
+1 1 1 1 1 1 2
+0 0 0 0 0 0 0
+0               #Numspeclinks
+_____?
+_____?
+_____?
+_____?
+_____?
+_Airfield
+__Fuel
+0
+2 19 0 0
+b
+
+#Section 5 (29650-36649)
+Airgroups
+29650
+15
+250
+13
+1 1 1 1 1 1 1 1 1 1 1 1 1
+6 0 0 0 0 0 0 0 0 0 0 0 0
+2               #Numspeclinks
+1      0    39 5     0 1 _none
+1    100   299 1   100 1 _____
+_________Plane
+_______Location
+Exp
+Dam
+__?
+Rdy
+Fue
+Hgr
+Ord
+XX
+XX
+XX
+Nat
+0
+30000 60 2 300
+a
+ 
+#Section 6 (7600-9799)
+Planes
+7600
+14
+100
+8
+1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0
+0               #Numspeclinks
+______Type
+_Manvr
+_Cannon
+_Load
+_Range
+_Durab
+_Arrival
+_Cost
+1
+0
+8
+0 Fighter 1 FghtBomb 2 DiveBomb 3 TorpBomb 4 TactBomb 
+5 HeavyBomb 6 Transport 7 Patrol
+80000 60 0 1
+p
+
+#Section 7 (39177-39214)
+ShipLosses
+39177
+0
+2
+19
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0               #Numspeclinks
+CV
+_CVL
+_CVE
+_BB
+_BC
+_CA
+_CL
+_CLAA
+_AV
+_DD
+_DE
+_PF
+_APD
+_AO
+_AP
+_APA
+__AKA
+_TK
+_SS
+0
+60000 0 0 -1
+v
+0
+Japanese
+Allied__
+
+#Section 8 (36650-37149)
+Base&TF_Locs
+36650
+0
+250
+2 
+1 1
+0 0
+0
+____X
+____Y
+0
+99999 0 0 0
+n
+#"names"
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+#Section 9 (37150-39149)
+Leaders
+37150
+15
+100
+5
+1 1 1 1 1
+0 0 0 0 0
+0               #Numspeclinks
+__Air
+_Land
+_Navl
+__Exp
+______Location
+0
+60000 50 4 0
+l
+
+#Section 10 (39150-39159)
+Data_____
+39150
+0
+10
+1
+1
+0
+0               #Numspeclinks
+_Value
+0
+60000 4 0 0
+d
+#Data names
+0
+__Scen
+__MinX
+__MinY
+__MaxX
+__MaxY
+___Min
+__Hour
+___Day
+_Month
+__Year
+
+#Section 11 (39283-39298)
+Points___
+39283
+0
+2
+4
+2 2 2 2
+0 0 0 0
+0               #Numspeclinks
+_JapMiss
+_AllMiss
+_JapDama
+_AllDama
+0
+60000 0 0 -1
+o
+#Point names
+0
+Campaign
+Battle__
+

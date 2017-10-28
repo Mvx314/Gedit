@@ -1,0 +1,1191 @@
+#GEdit definition file for modifying pac.exe, Matrix version 2.3 
+#Version 1.4 (updated for PacWar3.1)
+#(c) Mika V„liviita, 2002
+
+#!!!!! This is editing an executable, be very careful!
+#Version MUST be same.
+
+#Pacific War (c) SSI
+#Pacific War: The Matrix Project (c) 2000 Matrixgames
+
+#Do not edit unless you know exactly what you're doing.
+#Errors may cause GEdit to crash.
+#Maximum safe linelength is 79, you can continue on the next line.
+
+#Size of the file to be edited (also the size of the output file):
+506475               
+
+#Colors used (main color 1, secondary 1, main 2, secondary 2)
+#Default 12 4 9 1 (LIGHTRED,RED,LIGHTBLUE,BLUE)
+12 4 9 1
+#dark colors:BLACK=0,BLUE=1,GREEN=2,CYAN=3,RED=4,MAGENTA=5,BROWN=6,LIGHTGRAY=7
+#light colors:DARKGRAY=8,LIGHTBLUE=9,LIGHTGREEN=10,LIGHTCYAN=11,LIGHTRED=12
+#             LIGHTMAGENTA=13,YELLOW=14,WHITE=15
+
+#Number of sections = n. Max 25. Range is 0 - (n-1):
+25
+
+#Keys used to select that section, listed here for convenience
+#Used sectionkeys: abcdefghijklmnoprstuvyxzw
+#Unused: (don't use 'q')
+
+#Section 0          #Empty section for reference, do not touch
+Empty               #Sectionname (used as a header)
+0                   #Sectionstart (in bytes)
+0                   #Sectionnamelength (if this section contains names)
+0                   #Sectionsize (in units)
+0                   #Number of variables
+                    #Variable definitions (1byte,2byte (x+256y),4byte (abcd))
+                    #Links to other sections (by section number)
+0                   #Number of special links (ie. dependent on value)
+                    #Variable titles (as many as number of variables)
+0                   #Number or columns having vartexts
+                    #Column id to be texted (this overlaps with special links
+                     #and may not work if both are use in the same section)
+                    #Number of pairs for that column
+                    #Pairs of #,vartext
+99999 0 0 0         #Colorcolumn1,Colormodifier1,Colorcolumn2,Colormodifier2
+                     #(99999 as first implies default color for this section)
+                     #Adding 20000+n*10000 to colorcolumn1 modifies coloring
+                     #(various combinations of m1,s1,m2,s2, not all of them)
+q                   #Sectionkey
+0                   #Link to another sections name, if namelength == 0,
+                     #0 means no link, the names are then listed here
+                    
+
+#Section 1 
+Establishment               #Sectionname
+243390                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+3                #Sectionsize (in units)
+8                   #Number of variables
+1 1 1 1 1 1 1 1       #Variable definitions
+0 0 0 0 0 0 0 0      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+__Eng
+_Army
+_TBde
+__Div
+__Bde
+__Rgt
+___Bn
+__SBF
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+e
+#Names
+0
+____Squads 
+_Artillery 
+_____Tanks
+
+#Section 2 
+Missioncodes               #Sectionname
+236678                   #Sectionstart (in bytes)
+3                  #Sectionnamelength
+6                #Sectionsize (in units)
+0                   #Number of variables
+0                  #Number of special links
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+m
+#Names
+
+#Section 3 
+Terrainnames_               #Sectionname
+230904                   #Sectionstart (in bytes)
+13                  #Sectionnamelength
+5                #Sectionsize (in units)
+0                   #Number of variables
+0                  #Number of special links
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+t
+#Names
+
+#Section 4 (these are nullterminated, not fixed field)
+HQ_names______               #Sectionname
+230464                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+425                #Sectionsize (in units)
+1                   #Number of variables
+1
+0
+0                  #Number of special links
+_Names
+#Number of columns with vartexts:
+1
+0
+67
+0 / 42 * 45 - 46 .
+48 0 49 1 50 2 51 3 52 4 53 5 54 6 55 7 56 8 57 9
+32 _ 65 A 66 B 67 C 68 D 69 E 70 F 71 G 72 H 73 I 74 J 75 K 76 L 77 M 
+78 N 79 O 80 P 81 Q 82 R 83 S 84 T 85 U 86 V 87 W 88 X 89 Y 90 Z
+97 a 98 b 99 c 100 d 101 e 102 f 103 g 104 h 105 i 106 j 107 k 108 l 109 m 
+110 n 111 o 112 p 113 q 114 r 115 s 116 t 117 u 118 v 119 w 120 x 121 y 122 z
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+h
+#Names
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _
+
+#Section 5 (these are nullterminated, not fixed field)
+Misc_names______               #Sectionname
+230969                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+458                #Sectionsize (in units)
+1                   #Number of variables
+1
+0
+0                  #Number of special links
+_Names
+#Number of columns with vartexts:
+1
+0
+67
+0 / 42 * 45 - 46 .
+48 0 49 1 50 2 51 3 52 4 53 5 54 6 55 7 56 8 57 9
+32 _ 65 A 66 B 67 C 68 D 69 E 70 F 71 G 72 H 73 I 74 J 75 K 76 L 77 M 
+78 N 79 O 80 P 81 Q 82 R 83 S 84 T 85 U 86 V 87 W 88 X 89 Y 90 Z
+97 a 98 b 99 c 100 d 101 e 102 f 103 g 104 h 105 i 106 j 107 k 108 l 109 m 
+110 n 111 o 112 p 113 q 114 r 115 s 116 t 117 u 118 v 119 w 120 x 121 y 122 z
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+x
+#Names
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _
+
+#Section 6 (these are nullterminated, not fixed field)
+More_Misc_names_               #Sectionname
+234010                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+72                #Sectionsize (in units)
+1                   #Number of variables
+1
+0
+0                  #Number of special links
+_Names
+#Number of columns with vartexts:
+1
+0
+67
+0 / 42 * 45 - 46 .
+48 0 49 1 50 2 51 3 52 4 53 5 54 6 55 7 56 8 57 9
+32 _ 65 A 66 B 67 C 68 D 69 E 70 F 71 G 72 H 73 I 74 J 75 K 76 L 77 M 
+78 N 79 O 80 P 81 Q 82 R 83 S 84 T 85 U 86 V 87 W 88 X 89 Y 90 Z
+97 a 98 b 99 c 100 d 101 e 102 f 103 g 104 h 105 i 106 j 107 k 108 l 109 m 
+110 n 111 o 112 p 113 q 114 r 115 s 116 t 117 u 118 v 119 w 120 x 121 y 122 z
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+z
+#Names
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ _ _ 
+
+#Section 7 
+HQ_Nationalities_               #Sectionname
+229174                  #Sectionstart (in bytes)
+0                  #Sectionnamelength
+40                #Sectionsize (in units)
+1                   #Number of variables
+1       #Variable definitions
+0      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+__Nat
+#Number of columns with vartexts:
+1
+0
+13
+1 JA 2 JN 3 PHI 4 CHI 5 DUT 6 IND 7 AUS 8 NZ 9 BRI 
+10 USA 11 USMC 12 USN 13 CWL 
+#Color codes:
+60000 19 0 0
+#Sectionkey:
+n
+#Names
+0
+____Imperial_GHQ 
+______China_Army
+______South_Army 
+__Combined_Fleet 
+___8th_Area_Army
+________Kwantung
+_______14th_Army
+_______15th_Army
+_______16th_Army
+_______17th_Army
+_______25th_Army
+_______18th_Army
+_______32nd_Army
+___2nd_Area_Army
+_SouthSeas_Fleet
+_NorthSeas_Fleet
+_______8th_Fleet
+_______35th_Army
+__10th_Area_Army
+_Burma_Area_Army
+____________SEAC
+_______HQ_Malaya
+____________ABDA
+___________ANZAC
+______SW_Pacific
+___South_Pacific
+_Central_Pacific
+________4th_Army
+_______India_GHQ
+_______14th_Army
+___Eastern_Fleet
+___North_Pacific
+_______3rd_Fleet
+_______5th_Fleet
+_______7th_Fleet
+___Asiatic_Fleet
+________6th_Army
+________8th_Army
+_______10th_Army
+________HQ_Burma
+
+#Section 8 (Don't touch the X lines!)
+Game_end_year_________________               #Sectionname
+430958           #Sectionstart (in bytes)
+0                  #Sectionnamelength
+488                #Sectionsize (in units)
+1                   #Number of variables
+1       #Variable definitions
+0      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+_Year
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+y
+#Names
+0
+Year_(change_last_line_also) #This is the actual GAME ENDS year
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+X X X X X X
+Year-1_(See_comments_in_def) #This is AFTER which you get final result
+                                 #but this in itself won't end game.
+
+#Section 9 (Don't touch the X lines!)
+Planetype_arrival_zero_year________
+185726
+0
+51
+1
+1
+0
+0
+_Variable
+0
+99999 0 0 0
+p
+0
+Zero_year  #The year when the year (see below) is zero
+X X X X
+X X X X
+X X X X
+X X X X
+This_+_Zero_year_should_be_256  #This makes f.ex. 42 + 214 = 0 (single byte)
+X X X X
+X X X X
+X X X X
+X X X X
+X X X X
+X X 
+This_many_turns_per_year            #Each year above Zero_year adds this many
+X X X X X                            #turns to plane arrival counter
+Month_x_(1=>2,2=>4,3=>8,etc.)       #Month is doubled as many times as this
+X X X                                #and then added to the counter
+Turns_remaining_from_previous_year  #Leftovers from previous year also added
+
+#Section 10 
+Plane_upgrades_factories_               #Sectionname
+242646                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+100                #Sectionsize (in units)
+1                   #Number of variables
+1       #Variable definitions
+11      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+____Upgrades_to
+#Number of columns with vartexts:
+0
+#Color codes:
+80000 60 0 0
+#Sectionkey:
+f
+#Names
+0
+none
+F2A_Buffalo
+F4F_Wildcat
+FM2_Wildcat
+F4U_Corsair
+F6F_Hellcat
+F7F_Tigercat
+F8F_Bearcat
+Spitfire_VC
+SB2U_Vindactor
+SBD_Dauntless
+SB2C_Helldiver
+TBD_Devastator
+TBF_Avenger
+TBM_Avenger
+Firefly_I
+Fulmar_II
+Barracuda_I
+Albacore_I
+Blenheim_IV
+Boomerang_I
+Wirraway_III
+Mosquito_VI
+Hudson_I
+Vengeance_IV
+Wellington_III
+Buffalo_I
+Spitfire_XIV
+Spitfire_VIII
+Hurricane_II
+Tempest_II
+Beaufighter_X
+Blenheim_IF
+Beaufort_V
+Mohawk_IV
+Martin_139HW
+PBM_Mariner
+PBY_Catalina
+Vildebeest_I
+P-47D_Thndrblt
+P-47N_Thndrblt
+P-40_Warhawk
+P-38F_Lghtning
+P-38J_Lghtning
+B-29_Sprfrtrss
+P-51B_Mustang
+P-51D_Mustang
+P-51H_Mustang
+P-80_Shooting
+A-20_Havoc
+A-26_Invader
+B-25_Mitchell
+B-26_Marauder
+P-35_Republic
+B-24_Liberator
+B-17_Fortress
+B-18_Bolo
+P-36_Hawk
+P-39_Airacobra
+P-82_Twn_Mstng
+P-61_Blck_Wdw
+A5M
+A6M2_Reisen
+A6M5_Reisen
+A7M2_Reppu
+D3A
+D4Y_Suisei
+B5N
+B6N_Tenzan
+B7A_Ryusei
+Ki-27_Setsu
+Ki-43_Hayabusa
+Ki-44_Shoki
+Ki-61_Hien
+Ki-84_Hayate
+N1K_Shiden
+J2M_Raiden
+Ki-100_Goshiki
+J1N_Gekko
+Ki-102-Ko
+Ki-43-II_Hybsa
+Ki-32
+Ki-45_Toryu
+Ki-48
+Ki-21-II
+Ki-49_Donryu
+Ki-67_Hiryu
+G3M
+G4M
+P1Y_Ginga
+E13A
+H6K
+H8K
+Q1W_Tokai
+Ki-201_Karyu
+J7W_Shinden
+J9N_Kikka
+Ki-83
+Ki-51
+Ki-46-II
+
+#Section 11 
+Plane_upgrades_groups_               #Sectionname
+243414                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+100                #Sectionsize (in units)
+1                   #Number of variables
+1       #Variable definitions
+10      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+____Upgrades_to
+#Number of columns with vartexts:
+0
+#Color codes:
+80000 60 0 0
+#Sectionkey:
+g
+#Names
+0
+none
+F2A_Buffalo
+F4F_Wildcat
+FM2_Wildcat
+F4U_Corsair
+F6F_Hellcat
+F7F_Tigercat
+F8F_Bearcat
+Spitfire_VC
+SB2U_Vindactor
+SBD_Dauntless
+SB2C_Helldiver
+TBD_Devastator
+TBF_Avenger
+TBM_Avenger
+Firefly_I
+Fulmar_II
+Barracuda_I
+Albacore_I
+Blenheim_IV
+Boomerang_I
+Wirraway_III
+Mosquito_VI
+Hudson_I
+Vengeance_IV
+Wellington_III
+Buffalo_I
+Spitfire_XIV
+Spitfire_VIII
+Hurricane_II
+Tempest_II
+Beaufighter_X
+Blenheim_IF
+Beaufort_V
+Mohawk_IV
+Martin_139HW
+PBM_Mariner
+PBY_Catalina
+Vildebeest_I
+P-47D_Thndrblt
+P-47N_Thndrblt
+P-40_Warhawk
+P-38F_Lghtning
+P-38J_Lghtning
+B-29_Sprfrtrss
+P-51B_Mustang
+P-51D_Mustang
+P-51H_Mustang
+P-80_Shooting
+A-20_Havoc
+A-26_Invader
+B-25_Mitchell
+B-26_Marauder
+P-35_Republic
+B-24_Liberator
+B-17_Fortress
+B-18_Bolo
+P-36_Hawk
+P-39_Airacobra
+P-82_Twn_Mstng
+P-61_Blck_Wdw
+A5M
+A6M2_Reisen
+A6M5_Reisen
+A7M2_Reppu
+D3A
+D4Y_Suisei
+B5N
+B6N_Tenzan
+B7A_Ryusei
+Ki-27_Setsu
+Ki-43_Hayabusa
+Ki-44_Shoki
+Ki-61_Hien
+Ki-84_Hayate
+N1K_Shiden
+J2M_Raiden
+Ki-100_Goshiki
+J1N_Gekko
+Ki-102-Ko
+Ki-43-II_Hybsa
+Ki-32
+Ki-45_Toryu
+Ki-48
+Ki-21-II
+Ki-49_Donryu
+Ki-67_Hiryu
+G3M
+G4M
+P1Y_Ginga
+E13A
+H6K
+H8K
+Q1W_Tokai
+Ki-201_Karyu
+J7W_Shinden
+J9N_Kikka
+Ki-83
+Ki-51
+Ki-46-II
+
+#Section 12 
+Get_Transport_MCSs               #Sectionname
+286264                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+1                #Sectionsize (in units)
+1                   #Number of variables
+2
+0
+0                  #Number of special links
+Multiplier
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+s
+#Names
+0
+Times_port_size
+
+#Section 13 
+Days/Turn               #Sectionname
+59738                #Sectionstart (in bytes)
+0                  #Sectionnamelength
+1                #Sectionsize (in units)
+1                   #Number of variables
+1       #Variable definitions
+0      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+__Num
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+d
+#Names
+0
+_
+
+#Section 14 (When splitting, unittypes between these become next type)
+LCU_Splitting________               #Sectionname
+421505                #Sectionstart (in bytes)
+0                  #Sectionnamelength
+27                #Sectionsize (in units)
+1                   #Number of variables
+1       #Variable definitions
+0      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+__Num
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+l
+#Names
+0
+Min_type_not_changed
+X X X X X
+X X X X X
+X X X X X
+X X X X X
+X X X X X
+Max_type_not_changed
+
+#Section 15 
+Japanese_kill_modifier_start_year               #Sectionname
+429100                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+1                #Sectionsize (in units)
+1                   #Number of variables
+1
+0
+0                  #Number of special links
+Original_213
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+j
+#Names
+0
+Modifier:_+earlier,_-later
+
+#Section 16
+Obsolete_planes_____________               #Sectionname
+59976              #Sectionstart (in bytes)
+0                  #Sectionnamelength
+11                #Sectionsize (in units)
+10                   #Number of variables
+1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0
+0                  #Number of special links
+___1 ___2 ___3 ___4 ___5
+___6 ___7 ___8 ___9 __10
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+o
+#Names
+0
+X X X X 
+X X X 
+100+(2*Planeslot)_goes_here #This slot pool is then zeroed, starting '43
+X X X
+
+#Section 17
+Leader_promotions_(see_def_comments)               #Sectionname
+60179              #Sectionstart (in bytes)
+0                  #Sectionnamelength
+10                #Sectionsize (in units)
+8                   #Number of variables
+1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0
+0                  #Number of special links
+___1 ___2 ___3 ___4 ___5 #These change to USN ViceAdms (106,109,113,138,139)
+___6                     #This changes slot 155 to USA General
+_X_7 _X_8                #These two together remove slot 157 leader,
+                          #but they can be changed to promotions, by
+                          #modifying both columns to same as columns 1-6 are.
+                          #(Apart from slot and rank lines of course.)
+                         #Non-X lines define the slot and rank.
+                         #X lines are code. 
+                         #This happens in '43.
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+u
+#Names
+0
+X X X X 
+X X X 
+76+Leaderslot_goes_here
+X
+Rank_changed_to
+
+#Section 18 (This section has the table of classes the sunk USN ships
+#return as. Note that BBs, while in the table, are excluded by code.
+#Also note that there can be different value for each year the ship is sunk.
+#!!! Ships sunk in '46 return as ships of next class '42 line and so on.
+#!!! If there's a scenario where ships are sunk before '41, they can come
+#!!! back as practically anything. At 67904h is D7h (=215), increase this
+#by one for each earlier year.
+Sunk               #Sectionname
+243246              #Sectionstart (in bytes)
+0                  #Sectionnamelength
+8                #Sectionsize (in units)
+18                   #Number of variables
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0                  #Number of special links
+CV _CVL _CVE __BB __BC __CA 
+__CL CLAA __AV __DD __DE __PF 
+_APD __AO __AP _APA _AKA __TK
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+r
+#Names
+0
+1942 X 1943 X 1944 X 1945 X 
+
+#Section 19
+Restricted_HQs__               #Sectionname
+230424                   #Sectionstart (in bytes)
+0                  #Sectionnamelength
+40                #Sectionsize (in units)
+1                   #Number of variables
+1      #Variable definitions
+0      #Links to other sections
+0                  #Number of special links
+#Variable titles:
+_0=Restricted,1=Not
+#Number of columns with vartexts:
+0
+#Color codes:
+60000 19 0 0
+#Sectionkey:
+c
+#Names
+0
+____Imperial_GHQ 
+______China_Army
+______South_Army 
+__Combined_Fleet 
+___8th_Area_Army
+________Kwantung
+_______14th_Army
+_______15th_Army
+_______16th_Army
+_______17th_Army
+_______25th_Army
+_______18th_Army
+_______32nd_Army
+___2nd_Area_Army
+_SouthSeas_Fleet
+_NorthSeas_Fleet
+_______8th_Fleet
+_______35th_Army
+__10th_Area_Army
+_Burma_Area_Army
+____________SEAC
+_______HQ_Malaya
+____________ABDA
+___________ANZAC
+______SW_Pacific
+___South_Pacific
+_Central_Pacific
+________4th_Army
+_______India_GHQ
+_______14th_Army
+___Eastern_Fleet
+___North_Pacific
+_______3rd_Fleet
+_______5th_Fleet
+_______7th_Fleet
+___Asiatic_Fleet
+________6th_Army
+________8th_Army
+_______10th_Army
+________HQ_Burma
+
+#Section 20 (This section has a table of weaponcounts for weapons 32 and 33.
+#The values here are the maximum reached after Jul '44, fractions of these
+#are used in '43, and early half of '44.)
+Weapon_max               #Sectionname
+233386              #Sectionstart (in bytes)
+0                  #Sectionnamelength
+24                #Sectionsize (in units)
+1                   #Number of variables
+1
+0
+0                  #Number of special links
+Number
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+w
+#Names
+0
+Weapon_32: #Just means the next eleven affect weapon 32 weaponcount
+__CV _CVL _CVE __BB __BC __CA __CL CLAA __AV __DD __DE
+Weapon_33: #Just means the next eleven affect weapon 33 weaponcount
+__CV _CVL _CVE __BB __BC __CA __CL CLAA __AV __DD __DE
+
+#Section 21 (This section has objectives for various HQs. Some HQs have 2
+#separate sets (SSF,SEAC,SWPac,CenPac), difference of which I haven't
+#examined yet. If a line is name after a HQ, all following lines with an 'X'
+#are also objectives for that HQ, until next non-'X' line. Note that the
+#'none' lines are not to be touched. Also, these only provide a baseline,
+#the code has exceptions and variable strategies, which may very much
+#ignore these here. F.ex. NSF only targets the first 5 of its 9 listed,
+#unless Comb.Fleet targets Midway(!))
+AI_targets               #Sectionname
+238434              #Sectionstart (in bytes)
+0                  #Sectionnamelength
+459               #Sectionsize (in units)
+1                   #Number of variables
+1
+0
+0                  #Number of special links
+___________Base
+#Number of columns with vartexts:
+1
+0
+200
+#Names for values, taken from obc41  
+  0 _____               
+  1 Tokyo          
+  2 Nagoya         
+  3 Osaka          
+  4 Hiroshima      
+  5 Nagasaki       
+  6 Tokushima      
+  7 Aomori         
+  8 Etorofo_Jima   
+  9 Uruppu         
+ 10 Paramushiro    
+ 11 Sapporo        
+ 12 Karafuto       
+ 13 Okinawa        
+ 14 Amami_Oshima   
+ 15 Bonin_I.       
+ 16 Iwo_Jima       
+ 17 Lingayen       
+ 18 Panay          
+ 19 Manila         
+ 20 Samar          
+ 21 Bataan         
+ 22 Negros         
+ 23 Cebu           
+ 24 Leyte          
+ 25 Mindoro        
+ 26 Davao          
+ 27 Palawan        
+ 28 Jolo           
+ 29 Miri           
+ 30 Tarakan        
+ 31 Balikpapan     
+ 32 Menando        
+ 33 Macassar       
+ 34 Kendari        
+ 35 Halmahera      
+ 36 Kuching        
+ 37 Ambon_I.       
+ 38 Koepang        
+ 39 Batavia        
+ 40 Bali           
+ 41 Bangka_I.      
+ 42 Oosthaven      
+ 43 Palembang      
+ 44 Medan          
+ 45 Soembawa_I.    
+ 46 Dili           
+ 47 Soerabaja      
+ 48 Tenimbar_I.    
+ 49 Waigen_I.      
+ 50 Sorong         
+ 51 Hollandia      
+ 52 Wewak          
+ 53 Madang         
+ 54 Lae            
+ 55 Buna_&_Gona    
+ 56 Port_Moresby   
+ 57 Biak           
+ 58 Admiralty_I.   
+ 59 Noemfoar       
+ 60 Kavieng        
+ 61 Emirau_I.      
+ 62 Aitape         
+ 63 Gasmata        
+ 64 Rabaul         
+ 65 Green_I.       
+ 66 Buka_I.        
+ 67 Bougainville   
+ 68 Shortland      
+ 69 Kuantan        
+ 70 New_Georgia    
+ 71 American_Samoa 
+ 72 Milne_Bay      
+ 73 Guadalcanal    
+ 74 Cloncurry      
+ 75 Kokoda_Trail   
+ 76 Morotai        
+ 77 Rennell_I.     
+ 78 Kiriwina_I.    
+ 79 Rossel_I.      
+ 80 New_Caledonia  
+ 81 Efate          
+ 82 Espirtu_Santo  
+ 83 Santa_Cruz_I.  
+ 84 Tarawa         
+ 85 Makin_I.       
+ 86 Jaluit_I.      
+ 87 Wotje_I.       
+ 88 Kwajalein_I.   
+ 89 Maloelap_I.    
+ 90 Eniwetok_I.    
+ 91 Cape_Gloucester
+ 92 Nauru_I.       
+ 93 Wake_I.        
+ 94 Pagan          
+ 95 Ponape         
+ 96 Truk           
+ 97 Woleai_I.      
+ 98 Ulithi         
+ 99 Yap            
+100 Palau          
+101 Guam           
+102 Tinian         
+103 Saipan         
+104 Fiji           
+105 Sarmi          
+106 Tonga          
+107 Canton_I.      
+108 Ellice_I.      
+109 Palmyra        
+110 Christmas_I.   
+111 Hawaii         
+112 Maui           
+113 Pearl_Harbor   
+114 Kauai          
+115 Midway         
+116 Attu_I.        
+117 Kiska          
+118 Marcus_I.      
+119 Adak_I.        
+120 Dutch_Harbor   
+121 Singapore      
+122 Kuala_Lumpur   
+123 Khota_Bharu    
+124 Singora        
+125 Jitra          
+126 Bangkok        
+127 Rangoon        
+128 Mandalay       
+129 Kohima_&_Imphal
+130 Lashio         
+131 Dimapur        
+132 Dacca          
+133 Calcutta       
+134 Trincomalee    
+135 Columbo        
+136 Andaman_I.     
+137 Hainan         
+138 Haiphong       
+139 Hong_Kong      
+140 Zhanjiang      
+141 Canton         
+142 Amoy           
+143 Foochow        
+144 Tsingtao       
+145 Port_Arthur    
+146 Addu_I.        
+147 Seoul          
+148 Vancouver      
+149 Madras         
+150 Cook_I.        
+151 Shanghai       
+152 Canberra       
+153 Tientsin       
+154 Nassau         
+155 Cocanada       
+156 Bombay         
+157 Anchorage      
+158 Hughes         
+159 Flores         
+160 to_Eastern_U.S.
+161 Kolombangara   
+162 Cocos_I.       
+163 Perth          
+164 Chengtu        
+165 New_Delhi      
+166 Kweiyang       
+167 Kunming        
+168 Keelung        
+169 Sakishima_I.   
+170 Saigon         
+171 Lagaspi        
+172 Takao          
+173 Phnom_Penh     
+174 Clark_Field    
+175 Cagayan        
+176 Johnston_I.    
+177 North_Luzon    
+178 Moulmien       
+179 Broome         
+180 Darwin         
+181 Cairns         
+182 Townsville     
+183 Rockhampton    
+184 Brisbane       
+185 Sydney         
+186 Melbourne      
+187 Adelaide       
+188 Akyab          
+189 Auckland       
+190 Sendai         
+191 Tjilatjap      
+192 Manokwari      
+193 Kagoshima      
+194 Juneau         
+195 Seattle        
+196 San_Francisco  
+197 Los_Angeles    
+198 San_Diego      
+199 to_Middle_East 
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+a
+#Names
+0
+ImpGHQ X X X X X X 
+none none none none none none none none
+China_Army X X X X X X X X X X X X X X X X X X X X X X
+Comb_Fleet X X X X X X X X X X X X X X X X X X X X X X X X X
+Kwantung X X X X X
+2ndA X X X X X X X X X X
+14thA X X X X X X X X X X X X X X 
+32ndA X X 
+35thA X X X X X X X 
+15thA X X X X X X X X X X
+16thA X X X X X X X X X X X X X X X X X X X X X X X X 
+17thA X X X X X X X X X X X X X X X X X X X X X 
+18thA X X X X X X X X X X X X X X X X
+25thA X X X X X X X X X X X X X 
+NSF X X X X X X X X 
+SSF_1 X X X X X X X X X X X X X X X 
+SSF_2 X X X X X X X X X X X X X X
+BurmaAA X X X X X X 
+SEAC_1 X X X X X X X X X X X X X X X X X X X X X X X X X X
+SEAC_2 X X X X X X X 
+BurmaHQ X X X 
+MalayaAG X X X X X X X X X 
+ABDA X X X X X X X X X X X X
+ANZAC X X X X X X X X X X X 
+8thAA X X X X X X X X X X X X X X X X X X X X X X X X 
+10thAA X X X X X X X X 
+SWPac_1 X X X X X X X X X X X X X X X X X X X X X X X X X 
+SWPac_2 X X X X X X X X X X X X X X X X X X X X X X X 
+SoPac X X X X X X X X X X X X X X X 
+CenPac X X X X X X X X X X X X X X X X X X X X X X 
+CenPac_2 X X X X X
+NoPac X X X X X X 
+4thA X X X X X 
+
+#Section 22 (This section has templates for auto select TF. There are many
+#exceptions and timebased changes in the code that can override these.)
+#The ___?'s could be computer only TF types, haven't checked.
+Auto_TF___              #Sectionname
+234972             #Sectionstart (in bytes)
+0                  #Sectionnamelength
+12                #Sectionsize (in units)
+14                   #Number of variables
+1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0                  #Number of special links
+__AC __SC _Bom _Crg _Trp _Rep _EsC _Eva ___? ___? _MTB _Tok ___? ___?
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+v
+#Names
+0
+CV(L)s BB/BCs CAs CL(AA)s DDs DEs APDs AV/AP(A)s AKAs AOs CVEs PFs?
+
+#Section 23 (This section is somehow related to section 22, but I have
+#no idea how.)
+Auto_TF_2_              #Sectionname
+235140             #Sectionstart (in bytes)
+0                  #Sectionnamelength
+12                #Sectionsize (in units)
+14                   #Number of variables
+1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0                  #Number of special links
+__AC __SC _Bom _Crg _Trp _Rep _Esc _Eva ___? ___? _MTB _Tok ___? ___?
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+b
+#Names
+0
+CV(L)s BB/BCs CAs CL(AA)s DDs DEs APDs AV/AP(A)s AKAs AOs CVEs PFs?
+
+#Section 24 (This section has the carrier airgroup sizes. They are fitted
+#to capacity, and in '46 they flow over to next line, but no big harm.)
+Carrier_AGs              #Sectionname
+243514             #Sectionstart (in bytes)
+0                  #Sectionnamelength
+3                #Sectionsize (in units)
+20                   #Number of variables
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0                  #Number of special links
+Jap _42 _43 _44 _45 _US _42 _43 _44 _45 
+_Br _42 _43 _44 _45 CVE _42 _43 _44 _45
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+i
+#Names
+0
+Fightr
+DiveB_
+TorpB_

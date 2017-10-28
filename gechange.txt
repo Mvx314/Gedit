@@ -1,0 +1,134 @@
+___________________________________________
+---Version 1.4 Released Jul 17th, 2002---
+-------------------------------------------
+Changes in v1.4:
+----------------
+Change: Color inversion of uncolored sections is now on fixed lines.
+
+Change: Added a blockmove command. Use negative distance to move upward.
+        Any links pointing to the moving lines are not changed and will
+        be wrong until manually changed.
+
+Change: Minor addition to columnedit, replace command now shows how many
+        values were changed.
+
+Change: Added a command to dump all sections to stdout. Try 'gedit >dump.txt',
+        then type in the filename, wait a few seconds for loading, then press 
+        Alt-P, wait a while for dumping, then press ESC, and load dump.txt
+        in your favorite texteditor.
+
+___________________________________________
+---Version 1.31 Released Jul 9th, 2002---
+-------------------------------------------
+Changes in v1.31:
+----------------
+Change: Included the Carrier Strike and Western Front .def-files.
+
+___________________________________________
+---Version 1.3 Released May 20th, 2002---
+-------------------------------------------
+Changes in v1.3:
+----------------
+Change: You can now edit when Japanese get the kill modifier.
+
+Fix: Minor interface glitch fixed. (Using Alt-S after certain commands
+     caused automatic name entry, but you could just do it again with
+     no problem then.)
+
+Change: You can now swap any two lines in a section. This may have drastic
+        effects depending on the degree of hardwiredness, so take care.
+        Also, any related sections are not affected, any links still
+        point to the same line while that lines contents have changed.
+        (Mainly of use if you wish to alphabetize your ships :)
+
+Change: Added a clock to the main screen, also minor changes to the layout.
+
+Fix: Wrong values in the British generals section of pwgedit.def.
+
+Fix: You can now do a descending range properly.
+
+Change: Removed the gepacexe.def from the distribution, due to potential
+        for misbehavior. Any comments in this changes file relating to the
+        editing of the pac.exe no longer apply!
+
+Change: Updated the gedit.def file for PacWar 3.0.
+
+Note: This will be the last version, unless I get some new ideas on what to
+      implement.
+
+___________________________________________
+---Version 1.2 Released April 22nd, 2002---
+-------------------------------------------
+Changes in v1.2:
+----------------
+Change: You can now edit HQ nationalities.
+
+Change: You can now edit the year the game ends if no points advantage.
+
+Change: You can now edit the 'zero' year of aircraft arrival.
+
+Change: The file being edited is now shown on main screen.
+
+Change: You can edit both the aircraft upgrade paths, factories and groups.
+
+Change: Minor changes to pwgedit.def.
+
+Change: You can edit (somewhat) the days/turn. Warning! This has several
+        side-effects, such as the date in relation to unit arrivals still
+        being based on a 7 day turn, except planetype arrival that looks
+        at the date. Taskforce movement is also based on 7 day turns. Any 
+        date based events also look at the date.
+
+Change: You can now, when editing a column, give it a range and lines
+        between start and end are linearly assigned.
+
+Change: You can now do a Find by name. Case insensitive (for full name), 
+        also substring search (case sensitive). Only for those names
+        found in the file being edited (not references to other sections).
+
+Change: You can now edit whether a divided unit becomes another type.
+        (See establishment section for a list. LCU splitting to edit.)
+
+___________________________________________
+---Version 1.1 Released April 15th, 2002---
+-------------------------------------------
+Changes in v1.1:
+----------------
+Change: You can now give the name of a .def file as a command line parameter.
+
+Fix: A typo in my E-Mail address in the readme file.
+
+Change: Color inversion of every 10th line in uncolored sections.
+
+Change: Minor comment changes in pwgedit.def and the readme.
+
+Change: You can now count section averages.
+
+Fix: You can now backspace also the first letter or number when editing.
+
+Change: You can now replace an old value with a new one. (Column edit.)
+
+Fix: It was possible to edit unexisting columns. Not anymore.
+
+Change: You can now undo latest edit.
+
+Fix: It is no longer possible to set values to higher than max in some
+     editing functions. (Still possible when adding to old values with
+     relevant functions. Watch out. And use undo :)
+
+Change: You can now toggle between numbers and textual descriptions.
+
+Change: You can now edit available kamikaze squadrons.
+
+Change: You can now edit available A-Bombs. (Weapons, line 90, column 0.)
+
+Fix: Oil and Resource were off by one line, not anymore. However, there
+     seems to a some unknown limit to the x65536 values.
+
+Change: Several modifications to .def files, especially wirgedit.def is
+        much improved (still not complete though).
+
+Change: Included a gepacexe.def. Take care if you use this.
+__________________________________________
+---Version 1.0 Released April 2nd, 2002---
+------------------------------------------

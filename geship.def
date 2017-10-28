@@ -1,0 +1,498 @@
+#GEdit definition file for modifying pac.exe, Matrix version 2.3 and 3.0
+#Version 1.0 (Ship hardwires)
+#(c) Mika V„liviita, 2002
+
+#!!!!! This is editing an executable, be very careful!
+#Version MUST be same.
+
+#Pacific War (c) SSI
+#Pacific War: The Matrix Project (c) 2000 Matrixgames
+
+#Do not edit unless you know exactly what you're doing.
+#Errors may cause GEdit to crash.
+#Maximum safe linelength is 79, you can continue on the next line.
+
+#Size of the file to be edited (also the size of the output file):
+506475               
+
+#Colors used (main color 1, secondary 1, main 2, secondary 2)
+#Default 12 4 9 1 (LIGHTRED,RED,LIGHTBLUE,BLUE)
+12 4 9 1
+#dark colors:BLACK=0,BLUE=1,GREEN=2,CYAN=3,RED=4,MAGENTA=5,BROWN=6,LIGHTGRAY=7
+#light colors:DARKGRAY=8,LIGHTBLUE=9,LIGHTGREEN=10,LIGHTCYAN=11,LIGHTRED=12
+#             LIGHTMAGENTA=13,YELLOW=14,WHITE=15
+
+#Number of sections = n. Max 25. Range is 0 - (n-1):
+2
+
+#Keys used to select that section, listed here for convenience
+#Used sectionkeys: abcefghij
+#Unused: dklmnoprstuvwxyz (don't use 'q')
+
+#Section 0          #Empty section for reference, do not touch
+Empty               #Sectionname (used as a header)
+0                   #Sectionstart (in bytes)
+0                   #Sectionnamelength (if this section contains names)
+0                   #Sectionsize (in units)
+0                   #Number of variables
+                    #Variable definitions (1byte,2byte (x+256y),4byte (abcd))
+                    #Links to other sections (by section number)
+0                   #Number of special links (ie. dependent on value)
+                    #Variable titles (as many as number of variables)
+0                   #Number or columns having vartexts
+                    #Column id to be texted (this overlaps with special links
+                     #and may not work if both are use in the same section)
+                    #Number of pairs for that column
+                    #Pairs of #,vartext
+99999 0 0 0         #Colorcolumn1,Colormodifier1,Colorcolumn2,Colormodifier2
+                     #(99999 as first implies default color for this section)
+                     #Adding 20000+n*10000 to colorcolumn1 modifies coloring
+                     #(various combinations of m1,s1,m2,s2, not all of them)
+q                   #Sectionkey
+0                   #Link to another sections name, if namelength == 0,
+                     #0 means no link, the names are then listed here
+                    
+#Section 1 (This is the monthly (or less often) additions to pool. Side 0
+#means Japanese SCPs are used, side 1 means Allied SCPs. Amount is how many
+#ships of the next slot_xxx is being tried to add. Slot_xxx is just the
+#default for reference. And the times are really complex, so I haven't
+#placed them here, you'll just have to make do with slots and amounts.
+#It should be safe to make Amount 0, effectively disabling that slot.)
+#
+#Shippool is added to on the first week of the month.
+#
+#Following shipslots get new ships, if ship constructions points allow.
+#(And the full cost of (number*(dur+arm)) must be available, and spent.)
+#If not, no ships of that slot are added to pool that month.
+#Also, the side whose scp's are used, is mentioned here.
+#(And this is the order they are in the code, not easy to modify
+#systematically.)
+#
+#Japanese scps:
+#Slot 154 gets 4/month, until March '44.
+#Slot 154 gets 15/month, starting April '44.
+#(Slot 154's both use the same slot_154 line.)
+#Slot 191 gets 1/month, during '44.
+#Slot 192 gets 1/month, during '45.
+#Slot 182 gets 2/month, during Jan-Sep, starting '43.
+#Slot 183 gets 2/month, during Oct-Dec, starting '43.
+#Slot 182 gets 3 more/month, during Apr-Dec, starting '44.
+#Slot 183 gets 3 more/month, during Jan-Mar, starting '44.
+#Slot 179 gets 12/month.
+#Slot 180 gets 3/month.
+#Slot 179 gets 12 more/every 2 months, starting '44.
+#Slot 180 gets 12 more/every 2 months, starting '44.
+#Slot 181 gets 1/every 3 months.
+#Slot 168 gets 4/month.
+#Slot 169 gets 1/month.
+#Slot 170 gets 1/every 6 months.
+#Slot 165 gets 1/every 6 months.
+#
+#Allied scps:
+#Slot 156 gets 8/month, during Jul-Dec '42.
+#Slot 156 gets 8/month, in '43, if there are less than 41 in pool.
+#(Slot 156 getting 8 are both on the same line (slot_156_8).) 
+#Slot 156 gets 16/month, starting '44, if there are less than 81 in pool.
+#Slot 166 gets 2/every 2 months.
+#Slot 186 gets 2/every 2 months.
+#Slot 171 gets 4/month, starting September '42.
+#Slot 172 gets 6/every 2 months, starting '43.
+#Slot 173 gets 2/every 2 months, starting '44.
+#Slot 184 gets 2/month, during '42-'43.
+#Slot 184 gets 6/every 2 months, starting '44.
+#Slot 185 gets 2/every 2 months.
+#Slot 157 gets 1/every 3 months, until '44.
+#Slot 159 gets 1/month, starting '44.
+#Slot 177 gets 10/month, starting May '43.
+#Slot 195 gets 2/every 2 months, until '43.
+#Slot 195 gets 6/every 2 months, during '43.
+#Slot 195 gets 10/every 2 months, starting '44.
+#Slot 197 gets 2/every 4 months, during '43.
+#Slot 197 gets 2/every 2 months, starting '44.
+#(Slot 197's are both handled by the same line.)
+#Slot 187 gets 2/every 2 months.
+#Slot 188 gets 1/every 2 months.
+#Slot 189 gets 1/every 2 months.
+#Slot 174 gets 6/every 2 months, during '45.
+#Slot 175 gets 4/every 2 months, during '45.
+#Slot 176 gets 2/every 2 months, during '45.
+#Slot 178 gets 8/every 2 months, during '45.
+#Slot 167 gets 2/every 2 months, during '45.
+
+Add_shippools  
+406642             
+0                 
+1125                
+1                
+1
+0
+0                 #Number of special links
+_val
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+a
+#Names
+0
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X 
+X X
+Side X Amount X slot_154 X 
+X X X X X X X X X X X X X X X
+Side X Amount X slot_191 X 
+X X X X X X X X X X X X X X X X X
+Side X Amount X slot_192 X 
+X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_182 X 
+X X X
+Side X Amount X slot_183 X 
+X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_182 X 
+X X X
+Side X Amount X slot_183 X 
+X X X X X X X X
+Side X Amount X slot_179 X 
+X X X X X X X X
+Side X Amount X slot_180 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_179 X 
+X X X X X X X X 
+Side X Amount X slot_180 X 
+X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_181 X 
+X X X X X X X X 
+Side X Amount X slot_168 X 
+X X X X X X X X 
+Side X Amount X slot_169 X 
+X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_170 X 
+X X X X X X X X 
+Side X Amount X slot_165 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X
+Side X Amount X slot_156_8 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_156_16 X 
+X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_166 X 
+X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_186 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_171 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_172 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_173 X 
+X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_184 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_184 X 
+X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_185 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_157 X 
+X X X X X X X X X X X X X X X
+Side X Amount X slot_159 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_177 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_195 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_195 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_195 X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_197 X 
+X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_187 X 
+X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_188 X 
+X X X X X X X X
+Side X Amount X slot_189 X 
+X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
+Side X Amount X slot_174 X 
+X X X X X X X X
+Side X Amount X slot_175 X 
+X X X X X X X X
+Side X Amount X slot_176 X 
+X X X X X X X X
+Side X Amount X slot_178 X 
+X X X X X X X X
+Side X Amount X slot_167 X 
+X X X X X X X X X
+
+#Section 2 (Also simple, this moves 3 units from ANZAC to SWPac in '43)
+LCU_hardwires2     
+63058              
+0                  
+29               
+3                 
+1 1 1
+0 0 0
+0                  #Number of special links
+___1 ___2 ___3
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+b
+#Names
+0
+X X X X
+Year_before         #After this year, this change happens (orig. after '42)
+X X X X X X X X X
+Trgt_byte_x1        #Address bytes (LCU HQ originally)
+Trgt_byte_x256
+Comp_value          #Check if this value (originally ANZAC)
+X X X X X X X X X
+Trgt_byte_x1        #Address bytes (same)
+Trgt_byte_x256
+New_value           #Originally SWPac
+
+#Section 3 (This section moves two IGHQ LCUs to base 147, under Comb.Fl.)
+LCU_hardwires3     
+63157              
+0                  
+47               
+2                 
+1 1
+0 0
+0                  #Number of special links
+___1 ___2
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+c
+#Names
+0
+X X X X 
+Year 
+X X X X X X 
+Month 
+X X X X X X X X X
+Trgt_byte_x1 
+Trgt_byte_x256
+Comp_value
+X X X X X X X X X 
+Trgt_byte_x1 
+Trgt_byte_x256
+New_value
+X X X X X X X
+Trgt_byte_x1 
+Trgt_byte_x256
+New_value
+X
+
+#Section 4 (This could contain the rest, but they are a mess. (I'd have to
+#make this section one long one, too much work.) See the extra notes above 
+#about these.)
+#LCU_hardwires4
+#63241              
+#0                  
+#1101               
+#1                  
+#1
+#0
+#0                  #Number of special links
+#___1 ___2 ___3 ___4 ___5
+#___6 ___7 ___8 ___9 __10
+#__11 __12 __13 __14 __15 
+#Number of columns with vartexts:
+#0
+#Color codes:
+#99999 0 0 0
+#Sectionkey:
+#d
+#Names
+#0
+
+#Section 5 (This section moves "delayed" Japanese LCUs to Japanese held
+#bases. Base hq is not relevant, but they arrive as Combined Fleet units.
+#If they are already onmap, they don't move.
+#This is a complicated section, and has restricted use, I haven't figured
+#out what controls the access to these changes, except that base 138 must
+#be Japanese, but there is another condition.)
+LCU_hardwires5    
+64340             
+0                 
+53                
+6                 
+1 1 1 1 1 1
+0 0 0 0 0 0
+0                  #Number of special links
+___1 ___2 ___3 ___4 ___5
+___6
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+e
+#Names
+0
+#!!! I think this section is only available for Japanese, under unknown
+#conditions.
+X X X X X X X
+Trgt_byte_x1    #These Trgt_bytes form the address being checked
+Trgt_byte_x256   #and the 2-byte value at that address I call "location".
+Comp_val_x1     #If the value formed by these two is less than "location"
+Comp_val_x256    #then the rest of this section is processed.
+                #Originally they check if the LCU is still "on delay",
+                 #so this doesn't affect on-map units.
+X X X X X X
+Year_when       #Year when this change happens.
+X X X X X X X X X 
+Trgt_byte_x1    #These two form (originally) the address of a base HQ value.
+Trgt_byte_x256
+Comp_val        #It is then compared to this, and if value < Comp_val
+                 #then the rest is processed.
+                #Originally this checks if base is still in Japanese hands.
+Jump_if_test    #This value is 115. If changed to 114, the test above is
+                 #reversed (value >= Compval), effectively testing if
+                 #base is in Allied hands.
+X X X X X X X X
+Trgt_byte_x1    #These two form the address where to put New_value_a
+Trgt_byte_x256
+New_value_a
+X X X X X X X
+Trgt_byte_x1    #These two form the address for New_value_b.
+Trgt_byte_x256  #(originally same as the first two trgt_bytes "location")
+New_value_b 
+X
+
+#Section 6 (This section handles slots 274,275,277 and 350, and is slightly
+#complex.)
+LCU_hardwires6    
+125648             
+0                 
+31                
+4                 
+1 1 1 1
+0 0 0 0
+0                  #Number of special links
+___1 ___2 ___3 ___4
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+f
+#Names
+0
+X X X X 
+Year_a          #If Year_a matches, check Month, else check Year_b.
+X X X X X X 
+Month           #If Month matches, do change, else skip.
+X X X X X X 
+Year_b          #If year is after Year_b , do change.
+X X X X X X X X X 
+Trgt_byte_x1    #As usual.
+Trgt_byte_x256
+New_value
+
+#Section 7 (This section handles slots 281 and 305.)
+LCU_hardwires7
+125772             
+0                 
+24                
+2                
+1 1
+0 0
+0                  #Number of special links
+___1 ___2
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+g
+#Names
+0
+X X X X 
+Year            #Year must match and
+X X X X X X 
+Month           #so must month.
+X X X X X X X X X
+Trgt_byte_x1    #As usual.
+Trgt_byte_x256
+New_value
+
+#Section 8 (This section sets 14 slots to 36 (6th Army) in '44.)
+LCU_hardwires8
+125836
+0                 
+9                
+14                
+1 1 1 1 1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0                  #Number of special links
+___1 ___2 ___3 ___4 ___5
+___6 ___7 ___8 ___9 __10
+__11 __12 __13 __14
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+h
+#Names
+0
+X X X
+Trgt_byte_x1    #Only the address this time, value is 36 for all.
+Trgt_byte_x256
+X X X X
+
+#Section 9 (This section sets 6 slots to 13 (2nd Area Army) in '44, if
+#base 32 is Japanese.)
+LCU_hardwires9
+114219
+0                 
+9                
+6                
+1 1 1 1 1 1 
+0 0 0 0 0 0 
+0                  #Number of special links
+___1 ___2 ___3 ___4 ___5 ___6
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+i
+#Names
+0
+X X X
+Trgt_byte_x1    #Only the address this time, value is 13 for all.
+Trgt_byte_x256
+X X X X
+
+#Section 10 (This section sets slots 23,37 and 91 to HQ 17 
+#when that arrives(I think))
+LCU_hardwire10
+116127
+0                 
+9                
+3                
+1 1 1
+0 0 0
+0                  #Number of special links
+___1 ___2 ___3
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+j
+#Names
+0
+X X X
+Trgt_byte_x1    #Only the address this time, value is 17 for all.
+Trgt_byte_x256
+X X X X
+

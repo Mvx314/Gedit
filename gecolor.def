@@ -1,0 +1,113 @@
+#GEdit definition file for modifying pac.exe, Matrix version 2.3 and 3.0
+#Version 1.0 (Colors)
+#(c) Mika V„liviita, 2002
+
+#!!!!! This is editing an executable, be very careful!
+#Version MUST be same.
+
+#Pacific War (c) SSI
+#Pacific War: The Matrix Project (c) 2000 Matrixgames
+
+#Do not edit unless you know exactly what you're doing.
+#Errors may cause GEdit to crash.
+#Maximum safe linelength is 79, you can continue on the next line.
+
+#Size of the file to be edited (also the size of the output file):
+506475               
+
+#Colors used (main color 1, secondary 1, main 2, secondary 2)
+#Default 12 4 9 1 (LIGHTRED,RED,LIGHTBLUE,BLUE)
+12 4 9 1
+#dark colors:BLACK=0,BLUE=1,GREEN=2,CYAN=3,RED=4,MAGENTA=5,BROWN=6,LIGHTGRAY=7
+#light colors:DARKGRAY=8,LIGHTBLUE=9,LIGHTGREEN=10,LIGHTCYAN=11,LIGHTRED=12
+#             LIGHTMAGENTA=13,YELLOW=14,WHITE=15
+
+#Number of sections = n. Max 25. Range is 0 - (n-1):
+3
+
+#Keys used to select that section, listed here for convenience
+#Used sectionkeys: cd
+#Unused: abdefghijklmnoprstuvwxyz (don't use 'q')
+
+#Section 0          #Empty section for reference, do not touch
+Empty               #Sectionname (used as a header)
+0                   #Sectionstart (in bytes)
+0                   #Sectionnamelength (if this section contains names)
+0                   #Sectionsize (in units)
+0                   #Number of variables
+                    #Variable definitions (1byte,2byte (x+256y),4byte (abcd))
+                    #Links to other sections (by section number)
+0                   #Number of special links (ie. dependent on value)
+                    #Variable titles (as many as number of variables)
+0                   #Number or columns having vartexts
+                    #Column id to be texted (this overlaps with special links
+                     #and may not work if both are use in the same section)
+                    #Number of pairs for that column
+                    #Pairs of #,vartext
+99999 0 0 0         #Colorcolumn1,Colormodifier1,Colorcolumn2,Colormodifier2
+                     #(99999 as first implies default color for this section)
+                     #Adding 20000+n*10000 to colorcolumn1 modifies coloring
+                     #(various combinations of m1,s1,m2,s2, not all of them)
+q                   #Sectionkey
+0                   #Link to another sections name, if namelength == 0,
+                     #0 means no link, the names are then listed here
+                    
+#USMC and USN are in a separate section because they are both
+#listed separately in the code, but use the same colors.
+
+#Section 1 (LCU Colors IJA-USA)
+#This is how I see the colors with black background:
+#0=Black,1=Dark Blue,2=Light Green,3=Turqoise,4=Red,5=Brown,6=Dark Orange,
+#7=Light Grey,8=Dark Grey,9=Light Blue,10=Dark Turqoise,11=Light Turqoise,
+#12=Light Orange,13=Dark Green,14=Yellow,15=White (MV)
+Colors_1__
+343650
+0                
+18
+10                
+1 1 1 1 1 1 1 1 1 1 
+0 0 0 0 0 0 0 0 0 0
+0                 #Number of special links
+_IJA _IJN _Phi _Chi _Dut _Ind __NZ _Aus _Bri _USA
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+c
+#Names
+0
+X X X Country
+X X 
+X X X X Background X 
+X X X X Text X 
+
+#Section 2 (LCU Colors USN-USMC)
+#This is how I see the colors with black background:
+#0=Black,1=Dark Blue,2=Light Green,3=Turqoise,4=Red,5=Brown,6=Dark Orange,
+#7=Light Grey,8=Dark Grey,9=Light Blue,10=Dark Turqoise,11=Light Turqoise,
+#12=Light Orange,13=Dark Green,14=Yellow,15=White (MV)
+Colors_2__
+343830
+0                
+24
+1                
+1
+0
+0                 #Number of special links
+_Code
+#Number of columns with vartexts:
+0
+#Color codes:
+99999 0 0 0
+#Sectionkey:
+d
+#Names
+0
+X X X USMC
+X X 
+X X X USN
+X X 
+X X X X Background X 
+X X X X Text X 
+

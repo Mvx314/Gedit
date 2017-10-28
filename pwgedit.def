@@ -1,0 +1,805 @@
+#GEdit definition file for reading PacWar scenario- and save-files.
+#Version 1.3 (fourth public release, updated for PacWar 3.0 (obc41 anyway))
+#(c) Mika V„liviita, 2002
+
+#Pacific War (c) SSI
+#Pacific War: The Matrix Project (c) 2000 Matrixgames
+
+#Do not edit unless you know exactly what you're doing.
+#Errors may cause GEdit to crash.
+#Maximum safe linelength is 79, you can continue on the next line.
+
+#Size of the file to be edited (also the size of the output file):
+65316               
+
+#Colors used (main color 1, secondary 1, main 2, secondary 2)
+#Default 12 4 9 1 (LIGHTRED,RED,LIGHTBLUE,BLUE)
+12 4 9 1
+#dark colors:BLACK=0,BLUE=1,GREEN=2,CYAN=3,RED=4,MAGENTA=5,BROWN=6,LIGHTGRAY=7
+#light colors:DARKGRAY=8,LIGHTBLUE=9,LIGHTGREEN=10,LIGHTCYAN=11,LIGHTRED=12
+#             LIGHTMAGENTA=13,YELLOW=14,WHITE=15
+
+#Number of sections = n. Max 25. Range is 0 - (n-1):
+26
+
+#Keys used to select that section, listed here for convenience
+#Used sectionkeys:abcdefghijklmnoprstuvwxyz
+#Unused: (don't use 'q')
+
+#Section 0          #Empty section for reference, do not touch
+Empty               #Sectionname (used as a header)
+0                   #Sectionstart (in bytes)
+0                   #Sectionnamelength (if this section contains names)
+0                   #Sectionsize (in units)
+0                   #Number of variables
+                    #Variable definitions (1byte,2byte (x+256y),4byte (abcd))
+                    #Links to other sections (by section number)
+0                   #Number of special links (ie. dependent on value)
+                    #Variable titles (as many as number of variables)
+0                   #Number or columns having vartexts
+                    #Column id to be texted (this overlaps with special links
+                     #and may not work if both are use in the same section)
+                    #Number of pairs for that column
+                    #Pairs of #,vartext
+99999 0 0 0         #Colorcolumn1,Colormodifier1,Colorcolumn2,Colormodifier2
+                     #(99999 as first implies default color for this section)
+                     #Adding 20000+n*10000 to colorcolumn1 modifies coloring
+                     #(various combinations of m1,s1,m2,s2, not all of them)
+q                   #Sectionkey
+0                   #Link to another sections name, if namelength == 0,
+                     #0 means no link, the names are then listed here
+                     #If namelength != 0, no value here
+
+#Section 1 (0-21999)
+Ships               #Sectionname
+0                   #Sectionstart (in bytes)
+13                  #Sectionnamelength
+1000                #Sectionsize (in units)
+7                   #Number of variables
+1 2 1 2 1 1 1       #Variable definitions (this has 7, of which 2 are 2-byte)
+2 0 0 0 0 0 0       #Links to other sections (only the first is linked)
+17                  #Number of special links
+#The special links:
+#column, low value, high value, sectionlink, number to subtract from value,
+#then value is divided by this, and then a title for those values not linked 
+#(The division is because pacwar was originally designed for daily turns,
+#and some values still show days to arrive, and I thought it would be easier
+#to read if it showed as turns to arrive instead.)
+1     0     1 0     0 1 _____
+1     2     2 0     0 1 _Supp
+1     3     3 0     0 1 _Fuel
+1     4     4 0     0 1 _Mixd
+1     5     5 0     0 1 __Res
+1     6     6 0     0 1 __Oil
+1     7   999 0     0 1 _____
+1  1000  1399 10 1000 1 _Army
+1  2000  2599 7  2000 1 _AirG
+1  3000  3999 0  3000 1 _RpFl
+1  4000  4999 0  4000 1 _RpAC
+1  5000 99999 0  5000 7 SubDl 
+3     0     0 0     0 1 _Sunk
+3     1   200 6     0 1 _Base
+3   201   300 5   200 1 ___TF
+3  1000  9999 0   200 1 SubXY
+3 10000 99999 0 10000 7 Delay
+#Variable titles: (underscores are used for setting field widths)
+________Class
+_Cargo/Sub
+_Damage
+_--_Status_--_
+_Nat
+__Fuel
+__Ammo
+#Number of columns with vartexts:
+1
+#Column used:
+4
+#Number of pairs:
+13
+#The pairs of <code,vartext>:
+1 JA 2 JN 3 Phi 4 Chi 5 Dut 6 Ind 7 Aus 8 NZ 9 Bri 
+10 USA 11 USMC 12 USN 13 CWL 
+#Color codes:
+4 2 3 300
+#4 -> color1 from column 4 (Nat), 2 -> <= 2 use color1, >2 use color2,
+#3 -> modify by column 3 (Status), 300 -> <= 300 use main, >300 use second.
+#Sectionkey:
+s
+
+#Section 2 (22000-27599)
+Shipclasses
+22000
+13
+200
+14
+1 4 0 0 0 4 0 0 0 1 1 1 1 2 #4 means (abcdabcd...abcd), next 3 are 0 because
+0 3 3 3 3 0 0 0 0 0 0 0 0 0 #they are read with the 4
+0               #Numspeclinks
+_Type
+____________Weapon1
+____________Weapon2
+____________Weapon3
+____________Weapon4
+____Wp1#
+____Wp2#
+___Wp3#
+___Wp4#
+_Dur
+_Arm
+_Cap
+_Spd
+__Pool
+1
+0
+19
+1 CV 2 CVL 3 CVE 4 BB 5 BC 6 CA 7 CL 8 CLAA 9 AV 10 DD 11 DE 12 PF 13 APD
+14 AO 15 AP 16 APA 17 MCS 18 TK 19 SS
+0 13 13 0
+c
+
+#!Atomic Arsenal is located in line 90 warhead column.
+#Section 3 (27600-29599)
+Weapons
+27600
+15
+100
+5
+1 1 1 1 1
+0 0 0 0 0
+0               #Numspeclinks
+__Warhead
+____Range
+_____Flak
+_Accuracy
+_____Type
+1
+4
+6
+0 Bomb 1 AirTorp 2 Torpedo 3 Gun 4 DP_Gun 5 Flak_Gun
+99999 0 0 0
+w
+
+#Section 4 (29600-29719)
+HQ______________
+29600
+0
+40
+2
+2 1
+0 4
+6               #Numspeclinks
+0    0   199 6    0 1 _____
+0  201   299 5  200 1 _____
+0 2000 99999 0 2000 7 Delay
+1    0   199 4    0 1 _____
+1  200   399 4  200 1 _____  
+1  400 99999 0    0 1 _____
+________Location
+_Higher_HQ+Comp_Control
+0
+50000 19 0 300
+h
+#HQ names
+0
+____Imperial_GHQ 
+______China_Army
+______South_Army 
+__Combined_Fleet 
+___8th_Area_Army
+________Kwantung
+_______14th_Army
+_______15th_Army
+_______16th_Army
+_______17th_Army
+_______25th_Army
+_______18th_Army
+_______32nd_Army
+___2nd_Area_Army
+_SouthSeas_Fleet
+_NorthSeas_Fleet
+_______8th_Fleet
+_______35th_Army
+__10th_Area_Army
+_Burma_Area_Army
+____________SEAC
+_______HQ_Malaya
+____________ABDA
+___________ANZAC
+______SW_Pacific
+___South_Pacific
+_Central_Pacific
+________4th_Army
+_______India_GHQ
+_______14th_Army
+___Eastern_Fleet
+___North_Pacific
+_______3rd_Fleet
+_______5th_Fleet
+_______7th_Fleet
+___Asiatic_Fleet
+________6th_Army
+________8th_Army
+_______10th_Army
+________HQ_Burma
+
+#Section 5 (29720-30619)
+TF___
+29720
+0
+100
+8
+1 1 1 1 1 1 1 2
+6 6 4 0 0 0 0 1
+0               #Numspeclinks
+____Homeport
+_Destination
+______________HQ
+_Type
+_#Shp
+_SI #Knowledge level of the enemy about the TF
+_Dt #Distance traveled since leaving homeport? any port?
+_____Flagship
+1
+3
+64
+1 AC 2 SC 3 Bom 4 Crg 5 Trp 6 Rep 7 Tok 8 Evc
+21 bAC 22 bSC 23 bBom 24 bCrg 25 bTrp 26 bRep 27 bTok 28 bEvc
+41 dAC 42 dSC 43 dBom 44 dCrg 45 dTrp 46 dRep 47 dTok 48 dEvc
+51 eAC 52 eSC 53 eBom 54 eCrg 55 eTrp 56 eRep 57 eTok 58 eEvc
+61 fAC 62 fSC 63 fBom 64 fCrg 65 fTrp 66 fRep 67 fTok 68 fEvc
+71 gAC 72 gSC 73 gBom 74 gCrg 75 gTrp 76 gRep 77 gTok 78 gEvc
+91 hAC 92 hSC 93 hBom 94 hCrg 95 hTrp 96 hRep 97 hTok 98 hEvc
+101 jAC 102 jSC 103 jBom 104 jCrg 105 jTrp 106 jRep 107 jTok 108 jEvc
+60000 49 4 0
+t
+#TF names
+0
+_none TF__1 TF__2 TF__3 TF__4 TF__5 TF__6 TF__7 TF__8 TF__9
+TF_10 TF_11 TF_12 TF_13 TF_14 TF_15 TF_16 TF_17 TF_18 TF_19
+TF_20 TF_21 TF_22 TF_23 TF_24 TF_25 TF_26 TF_27 TF_28 TF_29
+TF_30 TF_31 TF_32 TF_33 TF_34 TF_35 TF_36 TF_37 TF_38 TF_39
+TF_40 TF_41 TF_42 TF_43 TF_44 TF_45 TF_46 TF_47 TF_48 TF_49
+TF_50 TF_51 TF_52 TF_53 TF_54 TF_55 TF_56 TF_57 TF_58 TF_59
+TF_60 TF_61 TF_62 TF_63 TF_64 TF_65 TF_66 TF_67 TF_68 TF_69
+TF_70 TF_71 TF_72 TF_73 TF_74 TF_75 TF_76 TF_77 TF_78 TF_79
+TF_80 TF_81 TF_82 TF_83 TF_84 TF_85 TF_86 TF_87 TF_88 TF_89
+TF_90 TF_91 TF_92 TF_93 TF_94 TF_95 TF_96 TF_97 TF_98 TF_99
+
+#Section 6 (30620-36419)
+Base
+30620
+15
+200
+12
+1 1 1 1 1 1 4 0 0 0 2 2
+0 0 4 0 0 0 6 6 6 6 0 0
+0               #Numspeclinks
+_____Oil
+_____Res
+__________________HQ
+____Airf
+____Port
+____Terr
+__________Path1
+___________Path2
+___________Path3
+___________Path4
+__Fuel
+____Supp
+0
+2 19 0 0
+b
+
+#Section 7 (36420-47819)
+Airgroups
+36420
+10
+600
+8
+1 1 2 1 1 1 1 1
+8 0 0 0 0 0 0 0
+5               #Numspeclinks
+2     0     0 0     0 1 Destr
+2     1   199 6     0 1 _____
+2   201   299 5   200 1 _____
+2  1000  1999 1  1000 1 _Ship
+2  2000 99999 0  2000 7 Delay
+_________Plane
+_Nat+Mis
+________Location
+_Exp
+___?
+_Damaged
+___?
+_Activ
+1
+1
+52
+1 JA-D 2 JN-D 3 Phil-D 4 Chin-D 5 Dut-D 6 Ind-D 7 Aus-D 8 NZ-D 
+9 Bri-D 10 USA-D 11 USMC-D 12 USN-D  
+21 JA-N 22 JN-N 23 Phil-N 24 Chin-N 25 Dut-N 26 Ind-N 27 Aus-N 28 NZ-N 
+29 Bri-N 30 USA-N 31 USMC-N 32 USN-N  
+41 JA-SA 42 JN-SA
+61 JA-NI 62 JN-NI 63 Phil-NI 64 Chin-NI 65 Dut-NI 66 Ind-NI 67 Aus-NI 
+68 NZ-NI 69 Bri-NI 70 USA-NI 71 USMC-NI 72 USN-NI  
+82 JN-OA
+110 USA-AB
+121 JA-T 122 JN-T 123 Phil-T 124 Chin-T 125 Dut-T 126 Ind-T 127 Aus-T 
+128 NZ-T 129 Bri-T 130 USA-T 131 USMC-T 132 USN-T  
+30000 60 2 300
+a
+ 
+#Section 8 (47820-50219)
+Planes
+47820
+14
+100
+9
+1 1 1 1 1 1 1 1 2
+0 0 0 0 0 0 0 0 0
+0               #Numspeclinks
+______Type
+_Manvr
+_Cannon
+_Load
+_Range
+_Durab
+_Arrival
+_Cost
+_Pool
+1
+0
+8
+0 Fighter 1 FghtBomb 2 DiveBomb 3 TorpBomb 4 TactBomb 
+5 HeavyBomb 6 Transport 7 Patrol
+80000 60 8 0
+p
+
+#Section 9 (50220-50619)
+Factories
+50220
+0
+100
+4
+1 1 1 1
+6 0 0 0
+2               #Numspeclinks
+1   0    99 0   0 1 _____
+1 100 99999 8 100 1 _____
+_______Location
+____________Type
+_Size
+_Status
+1
+1
+4
+0 Heavy_Industry 1 Artillery 2 Armor 3 Shipyard
+50000 50 3 0
+f
+#Factory "names"
+0
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+Factory__ Factory__ Factory__ Factory__ Factory__ 
+Factory__ Factory__ Factory__ Factory__ Factory__
+
+#Section 10 (50620-59819)
+Armies
+50620
+9
+400
+12
+1 1 2  2 1 1 1 1 1 1 1 1
+0 0 0 10 0 0 0 0 0 0 0 0
+4               #Numspeclinks
+2     0     0 0     0 1 Destr
+2     1   199 6     0 1 _____
+2   201   299 5   200 1 _____
+2  2000 99999 0  2000 7 Delay
+Type
+__Nat
+________Location
+__Parent_
+Sub#
+_Exp
+_Rd
+_AFV
+_Inf
+_Art
+_Ent
+_HQ
+2
+0
+8
+0 Eng 1 Army 2 TBde 3 Div 4 Bde 5 Rgt 6 Bn 7 SBF
+1
+42
+0 none
+1 JA 2 JN 3 Phi 4 Chi 5 Dut 6 Ind 7 Aus 8 NZ 9 Bri 
+10 USA 11 USMC 12 USN 13 CWL 
+100 none
+101 $JA 102 $JN 103 $Phi 104 $Chi 105 $Dut 106 $Ind 107 $Aus 108 $NZ 109 $Bri 
+110 $USA 111 $USMC 112 $USN 113 $CWL 
+200 none
+201 &JA 202 &JN 203 &Phi 204 &Chi 205 &Dut 206 &Ind 207 &Aus 208 &NZ 209 &Bri 
+210 &USA 211 &USMC 212 &USN 213 &CWL 
+11 19 2 300
+r
+
+#Section 11 (59820-60419)
+Base&TF_Locs
+59820
+0
+100
+6 
+1 1 1 1 1 1
+0 0 0 0 0 0
+0
+_Base_0-99X
+_Base100-199X
+___TF_X
+_Base_0-99Y
+_Base100-199Y
+___TF_Y
+0
+99999 0 0 0
+n
+#"names"
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+#Section 12 (60420-64619)
+Leaders
+60420
+12
+200
+8
+1 1 1 1 1 1 2 1
+0 0 0 0 0 0 0 0
+8               #Numspeclinks
+6   0     0 0   0 1 _Free
+6   1   199 6   0 1 _Base
+6 200   299 5 200 1 ___TF
+6 300   399 4 300 1 _Cmdr
+6 400 99999 0 400 1 AirLd
+7   0     0 0   0 1 _____
+7   1   253 0   0 1 __TTA
+7 254   254 0   0 1 _Dead
+__Air
+_Land
+_Navl
+__Exp
+_Aggr
+__Nat+Rank
+________Location
+____Delay
+1
+5
+56
+#Missing combinations could be listed and used by scenario designers.
+15 Jap_BrGen 16 Jap_MaGen 17 Jap_LtGen 18 Jap_Genrl 
+21 Jap_Captn 22 Jap_RearA 23 Jap_ViceA 24 Jap_Admrl
+45 Chi_BrGen 46 Chi_MaGen 47 Chi_LtGen 48 Chi_Genrl 
+51 Dut_Captn 52 Dut_RearA 53 Dut_ViceA 54 Dut_Admrl
+55 Dut_BrGen 56 Dut_MaGen 57 Dut_LtGen 58 Dut_Genrl
+71 Aus_Captn 72 Aus_RearA 73 Aus_ViceA 74 Aus_Admrl
+75 Aus_BrGen 76 Aus_MaGen 77 Aus_LtGen 78 Aus_Genrl
+91 Bri_Captn 92 Bri_RearA 93 Bri_ViceA 94 Bri_Admrl
+95 Bri_BrGen 96 Bri_MaGen 97 Bri_LtGen 98 Bri_Genrl
+105 USA_BrGen 106 USA_MaGen 107 USA_LtGen 108 USA_Genrl
+115 USMC_BGen 116 USMC_MGen 117 USMC_LGen 118 USMC_Genr 
+121 USN_Captn 122 USN_RearA 123 USN_ViceA 124 USN_Admrl
+131 Cwl_Captn 132 Cwl_RearA 133 Cwl_ViceA 134 Cwl_Admrl
+135 Cwl_BrGen 136 Cwl_MaGen 137 Cwl_LtGen 138 Cwl_Genrl
+5 25 7 0
+l
+
+#Section 13 (64620-64629)
+Data_____
+64620
+0
+10
+1
+1
+0
+0               #Numspeclinks
+_Value
+0
+60000 4 0 0
+d
+#Data names
+0
+__Scen
+__MinX
+__MinY
+__MaxX
+__MaxY
+(Hour) #Never loaded from file
+___Day
+_Month
+__Year
+(none) #Never used
+
+#Section 14 (64630-64645)
+Pools__________
+64630
+0
+2
+4 
+2 2 2 2
+0 0 0 0
+0               #Numspeclinks
+______Squads
+___Artillery
+_______Armor
+_Ship_Points
+0
+60000 0 0 0
+y
+#Pool names
+0
+Japanese
+__Allied
+
+#Section 15 (64646-64649)
+Sub_Controls_&_Side
+64646
+0
+4
+1
+1
+0
+0               #Numspeclinks
+_Control_Status
+0
+60000 1 0 0
+e
+#Sub controls
+0
+__Current_Player
+_Jap_Sub_Control
+_All_Sub_Control
+__________(none) #Never used
+
+#Section 16 (64650-64657)
+Jap_Oil&Resource
+64650
+0
+4
+1
+2
+0
+0               #Numspeclinks
+_Status
+0
+60000 1 0 0
+o
+#Oil&Resource
+0
+_____Oil_Reserve
+______Oil_x65536
+________Resource
+_Resource_x65536
+
+#Section 17 (64658-64697)
+HQ_Targets______
+64658
+0
+40
+1
+1
+6
+0               #Numspeclinks
+_________Target
+0
+60000 19 0 0
+g
+#HQ names for target (linked to section4 names)
+4
+
+#Section 18 (64702-64777)
+ShipLosses
+64702
+0
+2
+19
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0               #Numspeclinks
+CV
+_CVL
+_CVE
+_BB
+_BC
+_CA
+_CL
+_CLAA
+_AV
+_DD
+_DE
+_PF
+_APD
+_AO
+_AP
+_APA
+__AKA
+_TK
+_SS
+0
+60000 0 0 -1
+v
+#Shiptype names for losses
+0
+Japanese
+__Allied
+
+#Section 19 (64778-64829)
+Manpower_Losses
+64778
+0
+26
+1
+2
+0
+0               #Numspeclinks
+___Men
+0
+60000 5 0 0
+m
+#Nationality names for manpower losses
+0
+____none_________
+____none_________
+___JARMY_________
+__x65536_________
+___JNAVY_________
+__x65536_________
+____PHIL_________
+__x65536_________
+___CHINA_________
+__x65536_________
+___DUTCH_________
+__x65536_________
+___INDIA_________
+__x65536_________
+_____AUS_________
+__x65536_________
+______NZ_________
+__x65536_________
+______UK_________
+__x65536_________
+_____USA_________
+__x65536_________
+____USMC_________
+__x65536_________
+_____USN_________
+__x65536_________
+
+#Section 20 (64830)
+Kamikazes
+64830
+0
+1
+1
+1
+0
+0               #Numspeclinks
+_Available_groups
+0
+60000 0 0 0
+z
+#Kamikaze
+0
+_
+
+#Section 21 (64831-64870)
+HQ_PPs__________
+64831
+0
+40
+1
+1
+0
+0               #Numspeclinks
+__PPs
+0
+60000 19 0 0
+u
+#HQ_PPs names (linked to section 4 names)
+4
+
+#Section 22 (64871-64970)
+TF_PPs
+64871
+0
+100
+1
+1
+0
+0               #Numspeclinks
+_PPs
+0
+99999 0 0 0
+x
+#"names"
+0
+_none TF__1 TF__2 TF__3 TF__4 TF__5 TF__6 TF__7 TF__8 TF__9
+TF_10 TF_11 TF_12 TF_13 TF_14 TF_15 TF_16 TF_17 TF_18 TF_19
+TF_20 TF_21 TF_22 TF_23 TF_24 TF_25 TF_26 TF_27 TF_28 TF_29
+TF_30 TF_31 TF_32 TF_33 TF_34 TF_35 TF_36 TF_37 TF_38 TF_39
+TF_40 TF_41 TF_42 TF_43 TF_44 TF_45 TF_46 TF_47 TF_48 TF_49
+TF_50 TF_51 TF_52 TF_53 TF_54 TF_55 TF_56 TF_57 TF_58 TF_59
+TF_60 TF_61 TF_62 TF_63 TF_64 TF_65 TF_66 TF_67 TF_68 TF_69
+TF_70 TF_71 TF_72 TF_73 TF_74 TF_75 TF_76 TF_77 TF_78 TF_79
+TF_80 TF_81 TF_82 TF_83 TF_84 TF_85 TF_86 TF_87 TF_88 TF_89
+TF_90 TF_91 TF_92 TF_93 TF_94 TF_95 TF_96 TF_97 TF_98 TF_99
+
+#Section 23 (64971-65170)
+Gfx_pointers_Shipclasses #Only for scenariofiles, exe 'fixes' savefiles,
+64971                     #maybe comparing to obc41
+0
+200
+1
+1
+0
+0               #Numspeclinks
+_Gfx_num
+0
+99999 0 0 0
+i
+#linked to section 2 names
+2
+
+#Section 24 (65171-65270)
+Gfx_pointers_Aircraft #Exe doesn't 'fix' these
+65171
+0
+100
+1
+1
+0
+0               #Numspeclinks
+_Gfx_num
+0
+99999 0 0 0
+j
+#linked to section 8 names
+8
+
+#Section 25 (65271-65272)
+Factory_Controls____
+65271
+0
+2
+1
+1
+0
+0               #Numspeclinks
+_Control_Status
+0
+60000 0 0 0
+k
+#Factory controls
+0
+_Jap_Factory_Control
+_All_Factory_Control
+

@@ -1,0 +1,546 @@
+#GEdit definition file for reading WiR scenariofiles
+#Version 1.0 (second release, quite good)
+#(c) Mika V„liviita, 2002
+
+#War in Russia (c) SSI
+#War in Russia: The Matrix Project (c) 2000 Matrixgames
+
+#Do not edit unless you know exactly what you're doing.
+#Errors may cause GEdit to crash.
+#Maximum safe linelength is 79, you can continue on the next line.
+
+#See pwgedit.def for uptodate comments
+
+59892               #Size of the file
+
+#Colors used (main color 1, secondary 1, main 2, secondary 2)
+#Default 7 8 12 4 (LIGHTGRAY,DARKGRAY,LIGHTRED,RED)
+7 8 12 4
+#dark colors:BLACK=0,BLUE=1,GREEN=2,CYAN=3,RED=4,MAGENTA=5,BROWN=6,LIGHTGRAY=7
+#light colors:DARKGRAY=8,LIGHTBLUE=9,LIGHTGREEN=10,LIGHTCYAN=11,LIGHTRED=12
+#             LIGHTMAGENTA=13,YELLOW=14,WHITE=15
+
+20                  #Number of sections, n. Sectionnums are 0 - (n-1).
+
+#Used sectionkeys:abcdefghiklmnoptuyz
+#Unused: jrsvwy (don't use 'q')
+
+#Section 0          #Empty section for reference, do not touch
+Empty               #Sectionname
+0                   #Sectionstart (in bytes)
+0                   #Sectionnamelength
+0                   #Sectionsize (in units)
+0                   #Number of variables
+                    #Variable definitions (1byte,2byte (x+256y),4byte (abcd))
+                    #Links to other sections (by section number)
+0                   #Number of special links
+                    #Variable titles (=number of variables)
+0                   #Number or columns having vartexts
+                    #Column id to be texted
+                    #Number of pairs for that column
+                    #Pairs of #,vartext
+99999 0 0 0         #Colorcolumn1,Colormodifier1,Colorcolumn2,Colormodifier2
+                    #(99999 as first implies default color for this section)
+                    #Adding 20000+n*10000 to colorcolumn1 modifies coloring
+q                   #Sectionkey
+0                   #Namelink for zerolengthnames
+
+#Section 1 (0-2399)
+Cities               #Sectionname
+0                   #Sectionstart (in bytes)
+15                  #Namelength
+100                #Sectionsize (in units)
+9                   #Number of variables
+1 1 1 1 1 1 1 1 1  #Variable definitions
+0 0 0 0 0 0 0 0 0  #Links to other sections
+0                   #Number of special links
+#3     0     0 0     0 1 _Sunk
+#3     1   200 6     0 1 _____
+#3   201   300 5   200 1 _____
+#3  1000  9999 0   200 1 SubXY
+#3 10000 99999 0 10000 7 Delay
+_CurPop       #Variable title 0
+_OrigPop
+_CurOil
+_MaxOil
+_Res
+_Owner
+_Allegiance
+___X
+___Y
+2
+5
+2
+0 Ger 1 Rus
+6
+2
+0 Ger 1 Rus
+5 0 6 0
+c
+
+#Section 2 (2400-6999)
+Airgroups
+2400
+15
+200
+8
+1 1 1 1 1 1 1 1
+0 3 0 0 0 0 0 0
+5               #Numspeclinks
+2    0    49 6    0 1 _____
+2   51    51 0    0 1 __8th
+2   52    52 0    0 1 _12th
+2   53    53 0    0 1 8th-b
+2  100 99999 0  100 1 Delay
+_Nat
+______Planetype
+____HQ/Delay
+_Exp
+___?
+_Dam
+___?
+_Rdy
+1
+0
+6
+1 Ger 2 Fin 3 Rum 4 Hun 5 It 6 Rus
+0 5 2 100
+a
+
+#Section 3 (7000-9599)
+Planes
+7000
+15
+100
+11
+1 1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0
+0               #Numspeclinks
+_Typ
+_Mvr
+_Can
+__Ld
+_Rng
+_Dur
+_Arv
+_Cst
+_Upg
+_Nat
+_Gfx
+2
+0
+6
+0 Ftr 1 FB 2 DB 3 TD 4 B 5 Tr
+9
+3
+0 Ger 1 Rus 2 All
+9 0 6 0
+p
+
+#Section 4 (9600-12799)
+Factory
+9600
+0
+400
+7
+1 2 1 1 1 1 1
+1 0 0 0 0 0 0
+3               #Numspeclinks
+1  100   199 5  100 1 _____
+1  200   299 3  200 1 _____  
+1  300 99999 0    0 1 _____
+_______Location
+___________Type
+_Size
+__Dam
+_Delay
+_Avail
+___?
+1
+1
+3
+0 Heavy_Industry 1 Artillery 2 Recon
+50000 149 5 0
+f
+#"names"
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+#Section 5 (12800-15099)
+Tanks__________
+12800
+15
+100
+8
+1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0
+0               #Numspeclinks
+#0    0   199 6    0 1 _____
+#0  201   299 5  200 1 _____
+#0 2000 99999 0 2000 7 Delay
+#1    0   199 4    0 1 _____
+#1  200   399 4  200 1 _____  
+#1  400 99999 0    0 1 _____
+_Type
+_Atck
+_Dfns
+_Arrv
+_Cost
+_Upgr
+__Nat
+__Gfx
+2
+0
+6
+0 MT 1 HT 2 AG 3 HTD 4 MTD 5 LTD
+6
+2
+0 Ger 1 Rus
+6 0 3 0
+t
+
+#Section 6 (15100-15949)
+HQ___
+15100
+10
+50
+7
+1 1 1 1 1 1 1
+0 0 0 0 0 0 0
+3               #Numspeclinks
+3      0    99 6     0 1 _____ #Human
+3    100   199 6   100 1 _____ #Partial computer
+3    200   299 6   200 1 _____ #Full computer
+___Type
+__Nat
+___?
+_HigherHQ(+Comp)
+___?
+_ReplaceLvl
+___?
+2
+0
+5
+0 HighHQ 1 PzArmy 21 _Front 22 ArmyGp 23 __Army
+1
+6
+1 Ger 2 Fin 3 Rum 4 Hun 5 It 6 Rus
+60000 24 5 0
+h
+
+#Section 7 (15950-31149)
+Divisions
+15950
+9
+800
+10
+1 1 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0
+5               #Numspeclinks
+2      0   199 9     0 1 _____
+2    200   249 0   200 1 ___HQ
+4      0    99 0     0 1 _____
+4    100   254 0   100 1 Delay
+4    255   255 0     0 1 Destr
+_Type
+_Nat
+__Location
+_Exp
+___Readiness
+_Rec
+_Inf
+_Art
+_Flk
+__AT
+2
+0
+15
+3 PzrD 4 PzGD 5 MotD 11 PzBr 
+13 TnkC 14 TnkD 18 MchC 26 InfD 27 MntD 28 CavD 
+29 VGrD 30 LuWD 31 FJD 32 RifD 33 AirD 
+1
+8
+0 SS 1 Ger 2 Fin 3 Rum 4 Hun 5 It 6 Rus 7 Grd
+1 5 4 100
+d
+
+#Section 8 (31150-51549)
+Tankunits
+31150
+9
+1200
+7
+1 1 2 1 1 1 1
+0 0 0 0 0 0 0
+6               #Numspeclinks
+2     0   799 7     0 1 _____
+2  1000  1199 0  1000 1 Corps
+2  2000  2049 0  2000 1 ___HQ
+3     0    99 5     0 1 _____
+6     0    99 0     0 1 _____
+6   100 99999 0   100 1 Delay  
+__Type
+_Nat
+____Location
+_____Armor_Type
+_Num
+_Exp
+___Readiness
+2
+0
+11
+6 PzBn 7 HvPzBn 8 JPzBn 9 JPzBat 10 StuGBn 15 TnkBde 16 TnkRgt 20 SPGRgt
+34 Art 35 AT 36 Flak
+1
+8
+0 SS 1 Ger 2 Fin 3 Rum 4 Hun 5 It 6 Rus 7 Grd
+1 5 6 99
+u
+ 
+#Section 9 (51550-54749)
+Korps/Army
+51550
+10
+200
+6
+1 1 1 1 1 1
+0 0 0 0 0 0
+1               #Numspeclinks
+2     0    49 6     0 1 _____
+_____Type
+__Nat
+_________HQ
+_Entr
+___?
+___?
+2
+0
+6
+2 PzrKorps 12 TankArmy 18 MechCorps 23 Army 24 Korps 25 Corps
+1
+7
+0 SS 1 Ger 2 Fin 3 Rum 4 Hun 5 It 6 Rus
+20001 5 2 0
+k
+
+#Section 10 (54750-55749)
+Korps&HQ_Locations
+54750
+0
+250
+4
+1 1 1 1
+0 0 0 0
+0               #Numspeclinks
+#1   0    99 0   0 1 _____
+#1 100 99999 8 100 1 _____
+___X
+___Y
+___?
+___?
+0
+50000 199 0 221
+z
+#"names"
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+#Section 11 (55750-57349)
+Leaders
+55750
+15
+100
+1
+1 
+0
+0               #Numspeclinks
+_Rating
+0
+60000 49 0 0
+l
+
+#Section 12 (57350-58349)
+Unknown_1
+57350
+0
+250
+4
+1 1 1 1 
+0 0 0 0
+0               #Numspeclinks
+___?
+___?
+___?
+___?
+0
+99999 0 0 0
+b
+#"names"
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+#Section 13 (58350-58359)
+Data_____
+58350
+0
+10
+1
+1
+0
+0               #Numspeclinks
+_Value
+0
+60000 4 0 0
+y
+#Data names
+0
+_____?
+__MinX
+__MinY
+__MaxX
+__MaxY
+___Day
+_Month
+__Year
+_____?
+_?x256
+
+#Section 14 (58362-58377)
+Pools_________________
+58362
+0
+2
+4 
+2 2 2 2
+0 0 0 0
+0               #Numspeclinks
+__Infantry
+_Artillery
+__Antitank
+______Flak
+0
+60000 0 0 0
+o
+#Pool names
+0
+____Axis
+_Russian
+
+#Section 15 (58380-58433)
+Unknown_2
+58380
+0
+54
+1
+1  
+0 
+0               #Numspeclinks
+___?
+0
+99999 0 0 0
+e
+#"names"
+0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _
+
+#Section 16 (58434-58435)
+Factory_controls
+58434
+0
+2
+1
+1 
+0
+0               #Numspeclinks
+_Status
+0
+60000 0 0 0
+g
+#"names"
+0
+____Axis
+_Russian
+
+#Section 17 (58702-58801)
+HQ_Objectives
+58702
+0
+50
+1
+2 
+0
+0               #Numspeclinks
+_XXYY
+0
+60000 24 0 100
+i
+#Link to HQ names
+6
+
+#Section 18 (59492-59691)
+Plane_pools____
+59492
+0
+100
+1 
+2 
+0 
+0               #Numspeclinks
+_Planes
+0
+60000 23 0 0
+m
+#Pool names
+3
+
+#Section 19 (59692-59891)
+Tank_pools_____
+59692
+0
+100
+1 
+2 
+0 
+0               #Numspeclinks
+__Tanks
+0
+60000 30 0 0
+n
+#Pool names
+5
+
